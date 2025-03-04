@@ -217,21 +217,6 @@ public class AddNewTask extends BottomSheetDialogFragment {
         Toast.makeText(requireContext(),"AlarmSet for"+time,Toast.LENGTH_SHORT).show();
     }
 
-//    // Cancel existing notification before updating
-//    void cancelNotification(int taskId) {
-//        AlarmManager alarmManager = (AlarmManager) requireContext().getSystemService(Context.ALARM_SERVICE);
-//        Intent intent = new Intent(requireContext(), AlarmReceiver.class);
-//        PendingIntent pendingIntent = PendingIntent.getBroadcast(
-//                requireContext(), taskId, intent, PendingIntent.FLAG_NO_CREATE | PendingIntent.FLAG_IMMUTABLE
-//        );
-//        if (pendingIntent != null) {
-//            alarmManager.cancel(pendingIntent);
-//            pendingIntent.cancel();
-//            Log.d("NotificationCancel", "Notification canceled for taskId: " + taskId);
-//        } else {
-//            Log.d("NotificationCancel", "No active notification found for taskId: " + taskId);
-//        }
-//    }
     @Override
     public void onDismiss(@NonNull DialogInterface dialog) {
         super.onDismiss(dialog);
